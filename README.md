@@ -1,2 +1,3 @@
-# Ecommerce_App
-Just an app using React
+# react_js_tutorial
+
+Follow reactjs.org to learn React concepts from scratch
