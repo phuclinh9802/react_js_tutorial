@@ -1,8 +1,10 @@
-import React from 'react';
-import SearchBar from './SearchBar';
+import { CircularProgress } from '@mui/material';
+import React, { Suspense } from 'react';
 import data from './data';
-import ProductTable from './ProductTable';
-import { DataGrid } from '@mui/x-data-grid';
+const SearchBar = React.lazy(() => import('./SearchBar'));
+const ProductTable = React.lazy(() => import('./ProductTable'));
+
+
 
 class FilterableProducTable extends React.Component {
     constructor(props) {
@@ -42,15 +44,19 @@ class FilterableProducTable extends React.Component {
     }
 
     render() {
+
         const columns = this.state.columns;
         const data = this.state.data;
         return (
             <div className="table">
-                <SearchBar 
-                    onSearchBarChange={this.handleSearchBarChange}
-                    onCheckBoxChange={this.handleCheckBoxChange}
-                />
-                <ProductTable data={data} columns={columns}/>
+                <Suspense fallback={<CircularProgress />}>
+                    <SearchBar 
+                        onSearchBarChange={this.handleSearchBarChange}
+                        onCheckBoxChange={this.handleCheckBoxChange}
+                    />
+                    <ProductTable data={data} columns={columns}/>
+                </Suspense>
+               
             </div>
      
         );

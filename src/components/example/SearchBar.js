@@ -13,6 +13,7 @@ class SearchBar extends React.Component {
         this.handleCheckbox = this.handleCheckbox.bind(this)
     }
 
+    
     handleChange(e) {
         this.props.onSearchBarChange(e.target.value)
     }   
