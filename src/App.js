@@ -5,6 +5,7 @@ import Comment from './components/Comment';
 import Clock from './components/Clock';
 import LoginControl from './components/LoginControl';
 import NameForm from './components/NameForm';
+import Calculator from './components/Calculator';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
         <Clock/>
         <LoginControl />
         <NameForm />
+        <Calculator />
     </div>
   );
 }
