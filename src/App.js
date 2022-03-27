@@ -4,6 +4,7 @@ import Welcome from './components/Welcome';
 import Comment from './components/Comment';
 import Clock from './components/Clock';
 import LoginControl from './components/LoginControl';
+import NameForm from './components/NameForm';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
     <div className="App">
         <Clock/>
         <LoginControl />
+        <NameForm />
     </div>
   );
 }
