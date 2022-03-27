@@ -6,6 +6,8 @@ import Clock from './components/Clock';
 import LoginControl from './components/LoginControl';
 import NameForm from './components/NameForm';
 import Calculator from './components/Calculator';
+import WelcomeDialog from './components/composition/WelcomeDialog';
+import FilterableProducTable from './components/example/FilterableProductTable';
 
 function App() {
 
@@ -31,9 +33,13 @@ function App() {
   return (
     <div className="App">
         <Clock/>
-        <LoginControl />
+        <FilterableProducTable />
+
+        {/* <LoginControl />
         <NameForm />
         <Calculator />
+        <hr />
+        <WelcomeDialog /> */}
     </div>
   );
 }
