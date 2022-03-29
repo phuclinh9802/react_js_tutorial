@@ -9,6 +9,7 @@ import NameForm from "./components/NameForm";
 import Calculator from "./components/Calculator";
 import WelcomeDialog from "./components/composition/WelcomeDialog";
 import MyComponent from "./components/Code-splitting/MyComponent";
+import FancyButton from "./components/forwardRef/FancyButton";
 
 function App() {
   // React will call the Welcome component with {name: 'Phillip'} as the props
@@ -35,6 +36,7 @@ function App() {
     <div className="App">
       <Clock />
       <FilterableProducTable />
+      <FancyButton />
       {/* <MyComponent /> */}
 
       {/* <LoginControl />
